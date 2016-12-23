@@ -1,12 +1,11 @@
+```C
 /* -----------------------------------------
- 3.85% 
- Runtime: 0 ms
- 先將兩字串以 . 分割為陣列
- 陣列互相比較數字
+  方法一 : 3.85% Runtime: 0 ms
+  先將兩字串以 "." 分割為陣列，在遞迴陣列互相比較數字
  
- 考慮:
- 1. 前面有 0   ( 001.2 )
- 2. 長度不一樣 ( s1 = 1.2, s2 = 1.22.3 )
+  考慮:
+  1. 前面有 0   ( 001.2 )
+  2. 長度不一樣 ( s1 = 1.2, s2 = 1.22.3 )
  ----------------------------------------- */
 typedef char *  PChar;
 typedef char ** DPChar;
@@ -68,12 +67,10 @@ int compareVersion(char* version1, char* version2)
 }
 
 /* -----------------------------------------
- 3.85% 
- Runtime: 0 ms
- 法二
- 每一次直接取 . 前面的數字比
+  方法二 : 3.85% Runtime: 0 ms  
+  法二
+  每一次直接取 . 前面的數字比
  ----------------------------------------- */
-
 int compareVersion(char* version1, char* version2)
 {
     int V1Len   = strlen(version1);
@@ -119,3 +116,4 @@ int compareVersion(char* version1, char* version2)
     }
     return 0;
 }
+```

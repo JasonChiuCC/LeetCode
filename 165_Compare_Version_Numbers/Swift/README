@@ -1,15 +1,11 @@
+```swift
 /* -----------------------------------------
- Max :90% 
- Min :20% 
- Max Runtime: 16 ms
- Min Runtime: 62 ms
+  方法一 : 90%-20% Runtime:  62ms-16ms
+  先將兩字串以 "." 分割為陣列，在遞迴陣列互相比較數字
  
- 先將兩字串以 . 分割為陣列
- 陣列互相比較數字
- 
- 考慮:
- 1. 前面有 0   ( 001.2 )
- 2. 長度不一樣 ( s1 = 1.2, s2 = 1.22.3 )
+  考慮:
+  1. 前面有 0   ( 001.2 )
+  2. 長度不一樣 ( s1 = 1.2, s2 = 1.22.3 )
  ----------------------------------------- */
 import Foundation
 class Solution {
@@ -42,12 +38,9 @@ class Solution {
 }
 
 /* -----------------------------------------
- 10% 
- Runtime: 85 ms
- 法二
- 每一次直接取 . 前面的數字比
+  方法二 : 10% Runtime:  85ms
+  每一次直接取 "." 前面的數字比
  ----------------------------------------- */
-
 private extension String {
     subscript (index: Int) -> Character {
         return self[self.index(self.startIndex, offsetBy: index)]    
@@ -111,3 +104,4 @@ class Solution {
         return 0;   
     }
 }    
+```
