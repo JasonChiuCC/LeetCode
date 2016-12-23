@@ -1,0 +1,64 @@
+/* -----------------------------------------
+ 傳入字串和分割條件，回傳陣列
+ 注意: 傳入 strArray 要為字串陣列，例如
+ char str[] = "Hello";
+ 
+ 回傳值為 char **，且記得要 free
+          outputSize 為總共分割幾個
+          
+  舉例 : 1.2.33.4.555 ( 以 "." 分割 )
+  ArrayRes[0] = 1;
+  ArrayRes[1] = 2;
+  ArrayRes[2] = 33;
+  ArrayRes[3] = 4;
+  ArrayRes[4] = 555;
+  outputSize =  5        
+  
+  
+  *ArrayRes -> *[0] -> "AAA"
+               *[1] -> "BBB"
+               *[2] -> "CCC"
+  => ArrayRes = **
+ ----------------------------------------- */
+typedef char *  PChar;
+typedef char ** DPChar;
+DPChar JCSplit( PChar strArray, PChar delimit, int *outputSize)
+{
+    int     idx     = 0;
+    DPChar  result  = malloc( strlen(strArray) * sizeof(char*) );
+    PChar   token   = strtok(strArray, delimit);
+
+    while( token != NULL)
+    {
+        result[idx++] = token;
+        token = strtok(NULL, delimit);
+    }
+    *outputSize = idx;
+    /*
+    printf("idx = %d \n",idx);
+    idx = 0;
+    while( result[idx] != NULL){
+        printf("%s \n",  result[idx++]);
+    }
+    */
+    return result;
+}
+
+int main()
+{
+    PChar   SourceStr   = "1.1.3.52";
+    PChar   ArrayStr    = malloc( (strlen(SourceStr)+1) * sizeof(char) );
+    strcpy( ArrayStr, SourceStr);
+
+    int     V1ResLen    = 0;
+    DPChar  ArrayRes    = JCSplit(ArrayStr,".",&V1ResLen);
+    int idx = 0;
+    while( ArrayRes[idx] != NULL )
+    {
+        printf("%s \n", ArrayRes[idx++] );
+    }
+
+    free(ArrayStr);
+    free(ArrayRes);
+    return 0;
+}
