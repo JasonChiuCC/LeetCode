@@ -23,4 +23,4 @@ Status
 
 ![](https://img.shields.io/badge/[189]-42.86%25%20(055ms)-brightgreen.svg)
 
-![](https://img.shields.io/badge/[278]-Not-Support-brightgreen.svg)
+![](https://img.shields.io/badge/[278]-Not--Support-brightgreen.svg)
