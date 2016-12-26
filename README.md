@@ -18,3 +18,5 @@ Status
 ## Swift
 
 ![](https://img.shields.io/badge/[165]-90.00%25%20(016ms)-brightgreen.svg)
+
+![](https://img.shields.io/badge/[189]-42.86%25%20(055ms)-brightgreen.svg)
