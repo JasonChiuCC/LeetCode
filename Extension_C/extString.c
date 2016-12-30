@@ -24,61 +24,39 @@ while( (p = strtok(NULL, delim)) && p!= NULL )
 /* -----------------------------------------
  字串複製
  ----------------------------------------- */    
-char* inStr = "123456"
-char *aStr  = malloc( strlen(inStr)*sizeof(char));
-strcpy(aStr, inStr);
-free(aStr);
+char* strA = "123456"
+char* strB  = malloc( strlen(strA)*sizeof(char));
+strcpy(strB, strA);
+free(strB);
 
 /* ----------------------------------
  字串長度
  ---------------------------------- */
-char *p     = "hello";
-char q[]    = "hello"; // no need to count this
-printf("%zu\n", sizeof(p)); // => size of pointer to char -- 4 on x86, 8 on x86-64
-printf("%zu\n", sizeof(q)); // => size of char array in memory -- 6 on both
-printf("%zu\n", strlen(p)); // => 5
-printf("%zu\n", strlen(q)); // => 5
+char *strA     = "hello";
+char strB[]    = "hello"; // no need to count this
+printf("%zu\n", sizeof(strA)); // => size of pointer to char -- 4 on x86, 8 on x86-64
+printf("%zu\n", sizeof(strB)); // => size of char array in memory -- 6 on both
+printf("%zu\n", strlen(strA)); // => 5
+printf("%zu\n", strlen(strB)); // => 5
 
 /* ----------------------------------
  取字元
  ---------------------------------- */
-char* testStr = "Hello";
-printf("%c\n",testStr[2]);
+char* strA = "Hello";
+printf("%c\n",strA[2]);
 
 /* ----------------------------------
  字串複製
  ---------------------------------- */
 strncpy(dest, src + beginIndex, endIndex - beginIndex);
-Validated that dest is large enough.
-endIndex is greater than beginIndex
-beginIndex is less than strlen(src)
-endIndex is less than strlen(src)
-
 /*
- 0 1 2 3 4  5
- H e l l o \n
-   1 2 3
+ 0  1  2  3  4  5
+ H  e  l  l  o  \n
+    1  2  3
 */
-char*   t1      = "Hello";
-char    t2[255] = {0};
-strncpy(t2, t1 + 1, 3); //From 1 and Num = 3
-// t2 = ell
+char*   strA      = "Hello";
+char    strB[255] = {0};
+strncpy(strB, strA + 1, 3); //From 1 and Num = 3
+// strB = ell
 
 
-
-/* ----------------------------------
- String Pointer and Array
- ---------------------------------- */
-Use command below to dump object file.
-gcc -c main.c -o main.o
-objdump -Sr main.o
-
-// Point store .rodata section, not in .text
-char *s  = "abc";
-6:   c7 45 fc 00 00 00 00    movl   $0x0,-0x4(%ebp)
-     9: R_386_32     .rodata
-
-// Array store stack
-char s[] = "abc";
-15:   c7 44 24 08 61 62 63    movl   $0x636261,0x8(%esp)
-1c:   00
