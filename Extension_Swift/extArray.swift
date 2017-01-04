@@ -42,3 +42,8 @@ array.insert(val!,at:0) // 插入到指定位置，後面元素往後移
 # 陣列移除元素
 array.removeAtIndex(0) 
 array.popLast() // 移除最後一個，會回傳最後一個值
+
+// 過濾元素
+let even = chars.filter { 
+    $0 >= "a" && $0 <= "z"
+}

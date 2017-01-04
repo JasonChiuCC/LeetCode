@@ -114,7 +114,14 @@ int JC_Algo_BinarySearch(int data[], int search, int len)
             low = mid + 1;
         }
     }
-
     return -1;
 }
 
+/* -----------------------------------------
+ char 轉小寫
+ ----------------------------------------- */
+char JC_C_Lowercased(char ch) {
+    if (ch >= 'A' && ch <= 'Z')
+        ch += 0x20;
+    return ch;
+}

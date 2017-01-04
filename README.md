@@ -10,6 +10,8 @@ Status
 
 ## C 
 
+![](https://img.shields.io/badge/[125]-21.74%25%20(003ms)-brightgreen.svg)
+
 ![](https://img.shields.io/badge/[165]-03.85%25%20(000ms)-brightgreen.svg)
 
 ![](https://img.shields.io/badge/[168]-00.00%25%20(000ms)-brightgreen.svg)
@@ -20,6 +22,8 @@ Status
 
 
 ## Swift
+
+![](https://img.shields.io/badge/[125]-71.88%25%20(222ms)-brightgreen.svg)
 
 ![](https://img.shields.io/badge/[165]-90.00%25%20(016ms)-brightgreen.svg)
 
