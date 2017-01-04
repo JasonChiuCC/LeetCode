@@ -39,7 +39,7 @@ Status
 | ----- | ---------- | ---- | ----- |
 125. Valid Palindrome | Easy | ![](https://img.shields.io/badge/21.47%25-003ms-brightgreen.svg) | ![](https://img.shields.io/badge/71.88%25-222ms-brightgreen.svg) |
 165. Compare Version Numbers | Easy | ![](https://img.shields.io/badge/03.85%25-000ms-brightgreen.svg) | ![](https://img.shields.io/badge/90.00%25-016ms-brightgreen.svg) |
-
+168. Excel Sheet Column Title | Easy | ![](https://img.shields.io/badge/00.00%25-000ms-brightgreen.svg) | ![](https://img.shields.io/badge/75.00%25-016ms-brightgreen.svg) |
 
 
 
