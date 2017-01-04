@@ -4,6 +4,13 @@
 char * s    可直接 subscribe []
 char * s    可用 strlen 算長度
 char * s    等於 char s[]
+char * pA = malloc( sizeof(char*) * 4 );  最後記得放結束字元                        
+pA[0] = 'A';
+pA[1] = 'B';
+pA[2] = 'C';
+pA[3] = '\0';
+
+
 char ch     可直接做運算、比較( ch >= 'A', ch += 0x20)
 
  
