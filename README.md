@@ -36,7 +36,7 @@ Status
 ## Test
 | Title | Difficulty | C | Swift |
 | ----- | ---------- | ---- | ----- |
-125. Valid Palindrome | Easy | ![](https://img.shields.io/badge/[125]-21.74%25%20(003ms)-brightgreen.svg) | ![](https://img.shields.io/badge/[125]-71.88%25%20(222ms)-brightgreen.svg) |
+125. Valid Palindrome | Easy | ![](https://img.shields.io/badge/21.47%25-003ms-brightgreen.svg) | ![](https://img.shields.io/badge/71.88%25-222ms-brightgreen.svg) |
 
 
 
